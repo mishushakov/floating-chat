@@ -48,7 +48,7 @@ Add the tag to your template
 <floating-chat content="https://example.com" />
 ```
 
-You can see the demo example in [public/index.html](public/index.html)
+You can see the demo example in [index.html](index.html)
 
 ## Customisation
 
@@ -65,13 +65,13 @@ Available attributes:
 - `width`, floating window width, default `400px`, always `100%` on mobile
 - `textOpen`, text when the window is closed, default `Open`, hidden on mobile
 - `textClose`, text when the window is opened, default `Close`, hidden on mobile
-- `textColor` - the colour of text, default `#000000` (black)
-- `background` - background color, can be either a color code or a css `background` property, default `#FFFFFF` (white)
-- `logo` - logo url, css `background` property, eg `url(https://storage.googleapis.com/cloudprod-apiai/a0b2e356-b43e-4ca5-a094-b219475fa4ca_x.png)`
-- `position` - y, x position on screen, default `bottom right`, possible options `bottom`, `top`, `left`, `right`
-- `font` - font name
-- `borderRadius` - corner radius, default `28px`, `0px` on mobile when opened
-- `opened` - boolean, whether floating window should start opened, default `false`
+- `textColor`, the colour of text, default `#000000` (black)
+- `background`, background color, can be either a color code or a css `background` property, default `#FFFFFF` (white)
+- `logo`, logo url, css `background` property, eg `url(https://storage.googleapis.com/cloudprod-apiai/a0b2e356-b43e-4ca5-a094-b219475fa4ca_x.png)`
+- `position`, y, x position on screen, default `bottom right`, possible options `bottom`, `top`, `left`, `right`
+- `font`, font name
+- `borderRadius`, corner radius, default `28px`, `0px` on mobile when opened
+- `opened`, boolean, whether floating window should start opened, default `false`
 
 ### Styling with CSS variables
 
@@ -79,13 +79,13 @@ Available variables:
 
 - `--height`, floating window height, default `600px`, always `100%` on mobile
 - `--width`, floating window width, default `400px`, always `100%` on mobile
-- `--textcolor` - the colour of text, default `#000000` (black)
-- `--background` - background color, can be either a color code or a css `background` property, default `#FFFFFF` (white)
-- `--logo` - logo url, css `background` property, eg `url(https://storage.googleapis.com/cloudprod-apiai/a0b2e356-b43e-4ca5-a094-b219475fa4ca_x.png)`
-- `--positiony` - y position on screen, default `bottom`
-- `--positionx` - x position on screen, default `right`
-- `--font` - font name
-- `--borderradius` - corner radius, default `28px`, `0px` on mobile when opened
+- `--textcolor`, the colour of text, default `#000000` (black)
+- `--background`, background color, can be either a color code or a css `background` property, default `#FFFFFF` (white)
+- `--logo`, logo url, css `background` property, eg `url(https://storage.googleapis.com/cloudprod-apiai/a0b2e356-b43e-4ca5-a094-b219475fa4ca_x.png)`
+- `--positiony`, y position on screen, default `bottom`
+- `--positionx`, x position on screen, default `right`
+- `--font`, font name
+- `--borderradius`, corner radius, default `28px`, `0px` on mobile when opened
 
 ## Events
 
