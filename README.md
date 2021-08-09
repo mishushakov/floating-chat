@@ -118,7 +118,7 @@ export default {
 1. Clone the repository
 
     ```
-    git clone
+    git clone https://github.com/mishushakov/floating-chat.git
     ```
 
 2. Install the dependencies
