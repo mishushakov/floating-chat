@@ -40,19 +40,19 @@
 	<button
     title="{opened ? textclose: textopen}"
     aria-label="{opened ? textclose: textopen}"
-		class="df-btn {opened ? 'df-opened': 'df-closed'}"
+		class="floating-chat {opened ? 'floating-chat-opened': 'floating-chat-closed'}"
 		style="--height: {height}; --width: {width}; --textcolor: {textcolor}; --background: {background}; --borderradius: {borderradius}; --font: {font}; --logo: {logo}; --positiony: {positiony}; --positionx: {positionx}"
 		on:click={toggle}
 	>
-		<div class="df-btn-text">{opened ? textclose : textopen}</div>
-		<div class="df-btn-content">
+		<div class="floating-chat-text">{opened ? textclose : textopen}</div>
+		<div class="floating-chat-content">
 			<iframe src="{content}" title="{textopen}" allow="microphone *"></iframe>
 		</div>
 	</button>
 </main>
 
 <style>
-	.df-btn {
+	.floating-chat {
     padding: 0;
     border: none;
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 1px 3px 1px rgba(60,64,67,0.149);
@@ -70,7 +70,7 @@
     z-index: 999
   }
 
-  .df-btn-text {
+  .floating-chat-text {
     min-width: 56px;
     color: var(--textcolor);
     display: inline-flex;
@@ -81,7 +81,7 @@
     height: 48px
   }
 
-  .df-btn-text:before {
+  .floating-chat-text:before {
     min-width: 56px;
     height: 48px;
     background-position: center;
@@ -91,21 +91,21 @@
     content: ''
   }
 
-  .df-btn:hover {
+  .floating-chat:hover {
     box-shadow: 0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149)
   }
 
-  .df-btn:not(.df-closed) {
+  .floating-chat:not(.floating-chat-closed) {
     border-radius: calc(var(--borderradius) / 2)
   }
 
-  .df-btn:not(.df-closed) > .df-btn-text:before {
+  .floating-chat:not(.floating-chat-closed) > .floating-chat-text:before {
     background: var(--textcolor);
     -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>') no-repeat center;
     mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>') no-repeat center
   }
 
-  .df-btn-content {
+  .floating-chat-content {
     display: flex;
 		align-self: flex-end;
     height: var(--height);
@@ -114,36 +114,36 @@
     opacity: 1
   }
 
-  .df-btn:not(.df-closed) > .df-btn-content {
+  .floating-chat:not(.floating-chat-closed) > .floating-chat-content {
     padding-bottom: 16px;
   }
 
-	.df-btn-content iframe {
+	.floating-chat-content iframe {
 		height: 100%;
 		width: 100%;
 		border: none;
 	}
 
-  .df-closed > .df-btn-content {
+  .floating-chat-closed > .floating-chat-content {
     width: 0;
     height: 0;
     opacity: 0
   }
 
   @media screen and (max-width: 720px) {
-    .df-btn:not(.df-closed) {
+    .floating-chat:not(.floating-chat-closed) {
       margin: 0px;
       border-radius: 0px
     }
 
-    .df-btn:not(.df-closed) > .df-btn-content {
+    .floating-chat:not(.floating-chat-closed) > .floating-chat-content {
       width: 100vw;
       max-height: 100vh;
       height: calc(100vh - 56px);
       padding-bottom: 0px
     }
 
-    .df-btn-text {
+    .floating-chat-text {
       padding: 0;
       height: 56px;
       font-size: 0;

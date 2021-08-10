@@ -6,16 +6,16 @@
 
 [Demo](https://mishushakov.github.io/floating-chat)
 
-A framework-independent floating chat window web component written in [Svelte](https://github.com/sveltejs/svelte)
+A framework-agnostic floating chat window web component written in [Svelte](https://github.com/sveltejs/svelte)
 
-The primary purpose of it is embedding engageable content, in particular: helpdesks, chatbots or anything else that requires a floating box
+The primary purpose is embedding engageable content, in particular: helpdesks, chatbots or anything else that requires a floating box
 
 Features:
 
-- Cross-framework integration (esmodule & umd)
+- Framework-agnostic integration (esmodule & umd)
 - Responsive UI with animations
 - Accessibility features
-- Customisation options as well
+- Customisation options
 - Custom javascript events
 
 ## Installation
@@ -25,7 +25,7 @@ Features:
 Add the following script to your `<head>`
 
 ```html
-<script defer src='https://unpkg.com/floating-chat@latest/dist/index.js'></script>
+<script defer src="https://unpkg.com/floating-chat@latest/dist/index.js"></script>
 ```
 
 ### Using NPM
@@ -66,8 +66,8 @@ Available attributes:
 - `textOpen`, text when the window is closed, default `Open`, hidden on mobile
 - `textClose`, text when the window is opened, default `Close`, hidden on mobile
 - `textColor`, the colour of text, default `#000000` (black)
-- `background`, background color, can be either a color code or a css `background` property, default `#FFFFFF` (white)
-- `logo`, logo url, css `background` property, eg `url(https://storage.googleapis.com/cloudprod-apiai/a0b2e356-b43e-4ca5-a094-b219475fa4ca_x.png)`
+- `background`, background color, can be either a color code or a css background property, default `#FFFFFF` (white)
+- `logo`, logo url, css background property, eg `url(https://storage.googleapis.com/cloudprod-apiai/a0b2e356-b43e-4ca5-a094-b219475fa4ca_x.png)`
 - `position`, y, x position on screen, default `bottom right`, possible options `bottom`, `top`, `left`, `right`
 - `font`, font name
 - `borderRadius`, corner radius, default `28px`, `0px` on mobile when opened
@@ -80,12 +80,26 @@ Available variables:
 - `--height`, floating window height, default `600px`, always `100%` on mobile
 - `--width`, floating window width, default `400px`, always `100%` on mobile
 - `--textcolor`, the colour of text, default `#000000` (black)
-- `--background`, background color, can be either a color code or a css `background` property, default `#FFFFFF` (white)
-- `--logo`, logo url, css `background` property, eg `url(https://storage.googleapis.com/cloudprod-apiai/a0b2e356-b43e-4ca5-a094-b219475fa4ca_x.png)`
+- `--background`, background color, can be either a color code or a css background property, default `#FFFFFF` (white)
+- `--logo`, logo url, css background property, eg `url(https://storage.googleapis.com/cloudprod-apiai/a0b2e356-b43e-4ca5-a094-b219475fa4ca_x.png)`
 - `--positiony`, y position on screen, default `bottom`
 - `--positionx`, x position on screen, default `right`
 - `--font`, font name
 - `--borderradius`, corner radius, default `28px`, `0px` on mobile when opened
+
+Available CSS classes (modifiers):
+
+- `floating-chat-open`, when floating chat is open
+- `floating-chat-closed`, when floating chat is closed
+
+### Styling with JS
+
+You can change the above HTML attributes in JS, example:
+
+```js
+document.querySelector('floating-chat').width = '300px'
+document.querySelector('floating-chat').opened = true
+```
 
 ## Events
 
@@ -93,7 +107,7 @@ Following events are emmited:
 
 - `open`, when the floating window state went from closed to open
 - `close`, when the floating window state went from open to closed
-- `toggle`, when the floating window state was toggled
+- `toggle`, when the floating window state was changed
 
 Example in Vue:
 

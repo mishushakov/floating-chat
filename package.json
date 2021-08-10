@@ -1,8 +1,8 @@
 {
   "name": "floating-chat",
-  "description": "A framework-independent floating chat window web component written in Svelte",
+  "description": "A framework-agnostic floating chat window web component written in Svelte",
   "repository": "https://github.com/mishushakov/floating-chat.git",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "author": "Mish Ushakov",
   "main": "dist/index.js",
